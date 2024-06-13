@@ -20,4 +20,4 @@ solana config set --url https://api.mainnet-beta.solana.com
 chmod +x script.sh
 ```
 
-### 7. Run the script as a service file or using screen
+### 7. Run the script as a service file, crontab or using screen
