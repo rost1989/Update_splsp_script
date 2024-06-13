@@ -17,5 +17,5 @@ solana config set --url https://api.mainnet-beta.solana.com
 ### 6. Make the script executable with command:
 
 ```
-chmod +x script.sh'
+chmod +x script.sh
 ```
