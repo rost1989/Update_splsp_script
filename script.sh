@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Telegram bot token and chat ID
-TELEGRAM_BOT_TOKEN="YOUR_DATA"
-TELEGRAM_CHAT_ID="YOUR_DATA"
+TELEGRAM_BOT_TOKEN="<YOUR-DATA>"
+TELEGRAM_CHAT_ID="<YOUR-DATA>"
 
 # Function to send message to Telegram
 send_telegram_message() {
@@ -32,7 +32,10 @@ while true; do
         # Run update command until "Update not required"
         while true; do
             result=$(/root/sanctum-spl-stake-pool-cli/target/debug/splsp update EYwMHf8Ajnpvy3PqMMkq1MPkTyhCsBEesXFgnK9BZfmu 2>&1)
+            sleep 120
             echo "Result: $result"
+            send_telegram_message "Result of splsp update:
+$result"
 
             # Check if result contains "Update not required"
             if echo "$result" | grep -q "Update not required"; then
